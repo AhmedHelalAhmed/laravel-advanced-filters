@@ -37,7 +37,7 @@ class BaseFilter
     {
         $targetFilters = $this->getTargetFilters($filters);
         foreach ($targetFilters as $key => $filter) {
-            if (!($filter instanceof $filter)) {
+            if (!($filter instanceof Filter)) {
                 continue;
             }
             $filter->apply($builder, $this->frontendQuery[$key]);
